@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>svg</title>
+		<style type="text/css">
+			.circle {
+				stroke: #C3C3C3;
+				stroke-width: 4px;
+				stroke-dasharray: 300;
+				stroke-dashoffset: 300;
+				animation: dash 1.4s cubic-bezier(.42, .24, .01, .99) infinite;
+				transform-origin: center;
+			}
+			
+			@-webkit-keyframes dash {
+				50% {
+					stroke-dashoffset: 150;
+					transform: rotate(90deg);
+					stroke: #787D82
+				}
+				100% {
+					stroke-dashoffset: 0;
+					transform: rotate(180deg);
+				}
+			}
+			
+			@keyframes dash {
+				50% {
+					stroke-dashoffset: 150;
+					transform: rotate(90deg);
+					stroke: #787D82
+				}
+				100% {
+					stroke-dashoffset: 0;
+					transform: rotate(180deg);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<svg width="200" height="200">
+			<circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" class="circle" fill="none" />
+		</svg>
+	</body>
+
+</html>
